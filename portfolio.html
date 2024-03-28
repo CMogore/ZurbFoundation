@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <style>
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            height: 120px;
+        }
+
+        form button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-bar" data-topbar>
+        <div class="top-bar-left">
+            <ul class="menu">
+                <li class="menu-text">My Portfolio</li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="section align-middle"style="padding-top:80px; min-height:92vh">
+        <div class=" grid-x grid-padding-x align-middle"style="padding-left:30px ">
+            <div class="cell medium-6 "style="width:450px;padding:60px">
+                <img style="box-shadow:0 8px 45px aqua; border: 2px solid aqua; border-radius: 450px; margin-right:20px; height:auto" src="profile.jpeg" alt="Chelsea Mogore">
+            </div>
+            <div class="cell medium-6">
+                <h1>Hi! It's Chelsea</h1>
+                <h3>I am a <span style="color: aqua;">FullStack Developer</span></h3>
+                <p>
+                    My name is Chelsea Mogore, a soon-to-be graduate from Strathmore University having studied Computer Science. I am proficient in web design using HTML, CSS, PHP with Laravel Framework. 
+                    I am passionate about Machine Learning and Data Science.
+                </p>
+                <div class="flex-container align-justify align-items">
+                <div class="panel callout primary">
+                    Hire Me
+                </div>
+                <div class="panel callout alert">
+                    Download cv
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section panel callout primary">
+        <h2 class="text-center">Skills</h2>
+        <div class="grid-x grid-padding-x align-middle text-center ">
+            <div class="cell medium-4">
+                <h3>Frontend</h3>
+                <ul style="list-style: none;">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="cell medium-4">
+                <h3>Backend</h3>
+                <ul style="list-style: none;">
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+            <div class="cell medium-4">
+                <h3>Others</h3>
+                <ul style="list-style: none;">
+                    <li>Machine Learning</li>
+                    <li>Java</li>
+                    <li>Git</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="text-center">Projects</h2>
+        <div class="grid-x grid-padding-x">
+            <div class="cell medium-4">
+                <div class="callout"style="border: 2px solid aqua ">
+                    <h3>Sign Language Translation</h3>
+                    <p>The Sign Language Translation System is an innovative solution designed to bridge the communication gap between individuals who are deaf or hard of hearing and those who do not understand sign language.</p>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="callout"style="border: 2px solid aqua; padding-bottom:40px; ">
+                    <h3>Blood Donation System</h3>
+                    <p>The Blood Donation System is a comprehensive platform developed to streamline the process of blood donation, from donor registration to blood collection and distribution.</p>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="callout"style="border: 2px solid aqua; padding-bottom:40px;">
+                    <h3>E-Learning System</h3>
+                    <p>The E-Learning system is an integrated platform designed to facilitate online learning and course management for educational institutions, corporate training programs, and e-learning initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="background-color: #f4f4f4; padding: 50px 120px;">
+        <div class="grid-container">
+            <h2 class="text-center">Contact Me</h2>
+            <p class="text-center">Feel free to send me a message using the form below:</p>
+            <form action="submit_form.php" method="POST">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell medium-6">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="cell medium-6">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="cell medium-12">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="cell medium-12 text-center">
+                        <button type="submit" class="button">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <p class="text-center panel callout primary">&copy; 2024 Chelsea Mogore. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+</html>
